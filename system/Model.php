@@ -1746,7 +1746,7 @@ class Model
 
 		foreach ($rules as $field => $rule)
 		{
-			if (! array_key_exists($field, $data))
+			if (! array_key_exists($field, $data) && !isset($_FILES[$field]))
 			{
 				unset($rules[$field]);
 			}
